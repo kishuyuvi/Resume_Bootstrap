@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular-route.js"></script>
+    <script src="src/calcApp.js"></script>
+    <link rel="stylesheet" type="text/css" href="style/calcstyle.css">
+</head>
+
+<body>
+    <header>
+        <h1>Simple {{Angular JS}} calculator</h1></header>
+    <div ng-app="CalcApp" id="calculator">
+        <div ng-controller="CalcController as calApp">
+            <form name="calcForm">
+                <div class="top">
+                    <button ng-click="clearScreen()" class="clear">C</button>
+                    <div class="screen">{{result}}</div>
+                </div>
+                <div class="key">
+                    <button ng-click="operand('7')">7</button>
+                    <button ng-click="operand('8')">8</button>
+                    <button ng-click="operand('9')">9</button>
+                    <button ng-click="operator('+')">+</button>
+                    <button ng-click="operand('4')">4</button>
+                    <button ng-click="operand('5')">5</button>
+                    <button ng-click="operand('6')">6</button>
+                    <button ng-click="operator('-')">-</button>
+                    <button ng-click="operand('1')">1</button>
+                    <button ng-click="operand('2')">2</button>
+                    <button ng-click="operand('3')">3</button>
+                    <button ng-click="operator('*')">*</button>
+                    <button ng-click="operand('0')">0</button>
+                    <button ng-click="decimalPt()">.</button>
+                    <button ng-click="operator('=')" class="eval">=</button>
+                    <button ng-click="operator('/')">/</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>
